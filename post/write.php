@@ -75,7 +75,7 @@ body {
     </table> 
     <center>
       <input type="submit" value="완료">
-      <input type="button" value="목록"onclick="location.href='..'">
+      <input type="button" value="취소"onclick="location.href='./index.php'">
   </center>
   </form>
 <br>
