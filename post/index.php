@@ -3,10 +3,16 @@
 <meta charset="utf-8">
 <title>CS489 Word Alert - Word List</title>
 <style>
+body *{
+  font-family: 'NotoSansKR', sans-serif;
+  font-weight: normal;
+  font-size: 11pt;
+}
 .mainTable {
   border-collapse: collapse;
   border-top: 3px solid #168;
   width: 80%;
+  max-width: 1200px;
   height: auto;
   table-layout: fixed;
 }
@@ -22,11 +28,11 @@
 }
 .mainTable td {
   padding: 10px;
-  font-size: 12px;
   text-align: center;
   border: 1px solid #ddd;
   word-wrap:break-word;
-  height: 40px;
+  height: auto;
+  padding: 15px;
 }
 .mainTable th:first-child, .mainTable td:first-child {
   border-left: 0;
@@ -37,23 +43,20 @@
 .mainTable tr td {
   text-align: center;
 }
-body {
-  font-family: 'NotoSansKR', sans-serif;
-  font-weight: normal;
-  font-size: 12pt;
-}
 a:link {
   text-decoration: none;
   color: #333333;
+  font-size: 13px;
 }
 a:visited {
   text-decoration: none;
   color: #aaaaaa;
+  font-size: 13px;
 }
 a:hover {
   text-decoration: underline;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
   color: #000000;
 }
 
@@ -74,11 +77,7 @@ a:hover {
 ?>
 
 <center>
-  <H1>CS489 Word Alert - Word List</H1>
-<br>
-  <a href="write.php"><button>게시글 작성</button></a>
-<br>
-<br>
+  <H1 style="font-size: 24pt; font-weight: bold;">CS489 Word Alert - Word List</H1>
 <br>
   <table class="mainTable">
     <tr>
@@ -104,5 +103,9 @@ a:hover {
   }
 ?>
   </table>
+<br>
+<br>
+<br>
+<a href="write.php"><button>게시글 작성</button></a>
 </center>
 </BODY>

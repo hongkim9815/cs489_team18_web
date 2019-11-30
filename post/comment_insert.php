@@ -33,9 +33,8 @@
   }
   else
   {
-    $result = mysqli_query($conn, "SELECT * FROM $tablename WHERE board_id=$board_id ORDER BY id DESC LIMIT 1;");
-    $row = mysqli_fetch_array($result);
-    echo "1";
-    echo '<meta http-equiv="refresh" content="0; url=posts.php?id='.$row['board_id'].'">';
+    $query = "UPDATE board_list SET comment_cnt=comment_cnt+1 WHERE id=$board_id";
+    mysqli_query($conn, $query);
+    echo '<meta http-equiv="refresh" content="0; url=posts.php?id='.$board_id.'">';
   }
 ?>
