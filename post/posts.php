@@ -34,6 +34,7 @@
   a:visited{color:black; text-decoration: none; font-weight:bold; border-bottom: 3px solid #ffdf00;}
   a:hover{color:black; text-decoration: none; font-weight:bold; border-bottom: 3px solid #ffdf00;}
 
+
 .mainTable {
   border-collapse: collapse;
   border-top: 3px solid #168;
@@ -126,6 +127,11 @@ body {
   font-size: 13pt;
 }
 
+.warning {
+  color:black;
+  text-decoration: none;
+  border-bottom: 3px solid #ffdf00;
+}
 </style>
 </HEAD>
 
@@ -212,7 +218,8 @@ body {
 ?>
     <script>
     function replace() {
-      document.body.innerHTML = document.body.innerHTML.replace(/<?php echo $row['name'];?>/gi, '<a href="http://naver.com" target="_blank"><?php echo $row["name"];?></a>');
+      // document.body.innerHTML = document.body.innerHTML.replace(/<?php echo $row['name'];?>/gi, '<a href="http://naver.com" target="_blank"><?php echo $row["name"];?></a>');
+      document.body.innerHTML = document.body.innerHTML.replace(/<?php echo $row['name'];?>/gi, '<span style="border-bottom: 2px solid #ffdf00;"><?php echo $row["name"];?></span>');
     }
     replace();
     </script>

@@ -22,6 +22,10 @@
   if(strlen($name) * strlen($mean) == 0)
   {
     error_echo("string_length_cannot_be_0");
+    echo strlen($name);
+    echo strlen($mean);
+    echo strlen($_POST['name']);
+    echo strlen($_POST['mean']);
     die();
   }
 
@@ -32,6 +36,6 @@
   }
   else
   {
-    echo '<meta http-equiv = "refresh" content = "0; url=index.php">';
+    echo '<meta http-equiv = "refresh" content = "0; url=voca_input.php">';
   }
 ?>

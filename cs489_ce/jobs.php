@@ -16,22 +16,23 @@
   $conn = mysqli_connect($hostname, $username, $password, $databasename) or die("Connection error");
   mysqli_set_charset($conn, "utf-8");
 
-  $name = preg_replace("/[\'\;\"]/", "", $_POST["name"]);
-  $mean = preg_replace("/[\'\;\"]/", "", $_POST["mean"]);
-
-  if(strlen($name) * strlen($mean) == 0)
+  $query = ";";
+  $id = $_GET["id"];
+  if($_GET["do"] == '1')
   {
-    error_echo("string_length_cannot_be_0");
-    die();
+    $query = "UPDATE $tablename SET goodold = goodold + 1 WHERE id = $id;";
   }
-
-  $query = "INSERT INTO $tablename (name, mean) VALUES ('$name', '$mean');";
-  if(!mysqli_query($conn, $query))
+  else if($_GET["do"] == '2')
   {
-    error_echo($query);
+    $query = "UPDATE $tablename SET badold = badold + 1 WHERE id = $id;";
   }
   else
   {
-    echo '<meta http-equiv = "refresh" content = "0; url=index.php">';
+    $query = $_GET["do"];
+  }
+
+  if(!mysqli_query($conn, $query))
+  {
+    error_echo($query);
   }
 ?>

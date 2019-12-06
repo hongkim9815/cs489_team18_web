@@ -71,7 +71,7 @@ body {
       </tr>
     </table>
     <br>
-    <div style="font-family: 'consolas'">regex('/[\'\;\"\=]+/')에 해당하는 문자는 사라집니다.</div>
+    <div style="font-family: 'consolas'">regex('/[\'\;\"/]')에 해당하는 문자는 사라집니다.</div>
     <br>
     <center><input type="submit" value="Send Request"></center>
   </form>
